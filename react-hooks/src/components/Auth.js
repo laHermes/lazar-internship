@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function Auth() {
     return (
         <div>
@@ -7,5 +8,4 @@ function Auth() {
         </div>
     )
 }
-
 export default Auth
