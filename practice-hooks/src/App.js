@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useState } from "react";
+import "./App.css";
+import { NumberContext } from "./NumberContext";
+import Counter from "./components/Counter";
+import styled from "styled-components";
+import { Container } from "./components/Container";
+import { SearchInput } from "./components/SearchInput";
+
 
 function App() {
+  const [value, setValue] = useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact Us</li>
+        </ul>
+        <SearchInput>
+        <input type="text" placeholder="hello"/>
+        </SearchInput>
+      </Container>
+      <NumberContext.Provider value={{ value, setValue }}>
+        <h1 className="Container">{`value is ${value}`}</h1>
+        <Counter />
+      </NumberContext.Provider>
     </div>
   );
 }
