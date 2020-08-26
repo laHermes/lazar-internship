@@ -8,10 +8,11 @@ export const HeadingStyle = styled.nav`
   font-weight: 800;
   background-color: white;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
 
   .container {
-      margin: 0 auto;
-    width: 100%;
+    margin: 0 auto;
+    width: 90%;
     max-width: 1200px;
     display: flex;
     align-items: center;
