@@ -6,15 +6,12 @@ import ViewDetails from "./Webpages/ViewDetails";
 import Home from "./Webpages/Home";
 
 function App() {
-
   return (
     <div className="App">
       <Heading />
       <Router>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/:id"  component={ViewDetails}/>
-      </Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/:id" component={ViewDetails} />
       </Router>
     </div>
   );
